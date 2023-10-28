@@ -5,12 +5,12 @@
 from functools import lru_cache
 
 @lru_cache()
-def fibonacci(n):
+def tribonacci(n):
     if n in (1, 2):
         return 1
     if n == 0:
         return 0
-    return fibonacci(n - 3) + fibonacci(n - 1) + fibonacci(n - 2)
+    return tribonacci(n - 3) + tribonacci(n - 1) + tribonacci(n - 2)
  
  
-print(fibonacci(int(input())))
+print(tribonacci(int(input())))
